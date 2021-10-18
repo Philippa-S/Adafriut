@@ -33,6 +33,11 @@ while True:
             lib.c.publish(topic=lib.mqtt_pub_feedname, msg="""Hvad laver edderkoppen når den keder sig? Den går på nettet""")
             lib.besked =""
             sleep(2)
+        if besked == "giv mig en tilfældig joke":
+            print("modtaget")
+            lib.c.publish(topic=lib.mqtt_pub_feedname, msg="""Æblet og bananen sad alene i et mørt rum. Hvorfor var der mørkt?  Fordi pæren var gået""")
+            lib.besked =""
+            sleep(2)
         if besked == "hvad er temperaturen jarvis?":
             sleep(2)
             sensor.measure()
